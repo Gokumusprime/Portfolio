@@ -1,0 +1,31 @@
+/* _variables.scss *** Variables for the whole site. */
+
+/* Colors */
+
+$font-list: "Arial Black", Gadget, sans-serif;
+
+$font-primary-white: #ffffff;
+$font-primary-black: #000000;
+$font-secondary-color: #6190E8;
+$font-alternate-color: #778899;
+
+$primary-background: #6190E8;
+$secondary-background: #ffffff;
+$black-background: #000000;
+$brown-background: #737144;
+$gray-background: #3f4354;
+$foggy-gray-background: #cccfbc;
+$manila-folder: #f8f5e1;
+
+
+/// Creates a list of global breakpoints
+///
+/// @example scss - Creates a single breakpoint with the label `phone`
+///  $breakpoints: ('phone': 320px);
+///
+$breakpoints: (
+  'phone': 320px,
+  'lgphone': 400px,
+  'tablet': 768px,
+  'desktop': 1025px
+) !default;

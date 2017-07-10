@@ -1,0 +1,195 @@
+/* _header.scss *** Styles for the header section of the page. */
+
+header {
+    nav {
+        &.navbar-inverse {
+            background-color: transparent;
+            border: none;
+            position: relative;
+            @include transition-effect(all);
+            padding-top: 40px;
+            padding-bottom: 40px;
+            .navbar-header {
+                .navbar-brand {
+                    color: $font-primary-white;
+                    display: inline-block;
+                    vertical-align: middle;
+                    padding-top: 10px;
+                    &:focus,
+                    &:hover,
+                    &:active {
+                        color: $font-primary-white;
+                    }
+                    > img {
+                        width: 9rem;
+                        height: auto;
+                        padding: 0 10px 15px 15px;
+                        float: left;
+                        display: inline-block;
+                        vertical-align: middle;
+                        animation-name: bounce;
+                        animation-duration: 2.5s;
+                        animation-fill-mode: both;
+                        animation-iteration-count: infinite;
+                        @include media("<tablet") {
+                            max-width: 98px;
+                        }
+                        &.relative-img {
+                            display: block;
+                        }
+                        &.fixed-img {
+                            display: none;
+                        }
+                    }
+                    .brand-wrapper {
+                        display: inline-block;
+                        vertical-align: middle;
+                        padding: 0 0 15px 0;
+                        &:hover {
+                            @include basic-transition-effect (all .5s ease);
+                            @include transform-scaling-effect(1.1);
+                        }
+                        h4 {
+                            float: none;
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+                .navbar-toggle {
+                    border-color: $font-primary-white;
+                    &:focus,
+                    &:hover {
+                        background-color: transparent;
+                    }
+                }
+            }
+            .navbar-collapse {
+                border-top: none;
+                -webkit-box-shadow: none;
+                box-shadow: none;
+                @include media("<tablet") {
+                    text-align: center;
+                }
+                &.in {
+                    @include media("<tablet") {
+                        @include transition-effect(all);
+                    }
+                }
+                .navbar-nav {
+                    float: right;
+                    @include media("<tablet") {
+                        float: none;
+                        padding-bottom: 1rem;
+                        
+                    }
+                    > li {
+                        > a {
+                            color: $font-primary-white;
+                            @include media("<tablet") {
+                        		font-size: 1.4em
+                    		}
+                            &:focus,
+                            &:hover,
+                            &:active {
+                                color: $font-primary-white;
+                            }
+                            &.current-page {
+                               	border-bottom-color: $font-primary-white;
+                            }
+                        }
+                    }
+                }
+            }
+            &.fixed-header {
+                position: fixed;
+                background-color: $secondary-background;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                @include border-shadow-alternative-effect($black-background);
+                .navbar-header {
+                    .navbar-brand {
+                        color: $font-secondary-color;
+                        &:focus,
+                        &:hover,
+                        &:active {
+                            color: $font-secondary-color;
+                        }
+                    }
+                }
+                .navbar-collapse {
+                    @include media("<tablet") {
+                        text-align: center;
+                    }
+                    .navbar-nav {
+                        float: right;
+                        @include media("<tablet") {
+                            float: none;
+                            padding-bottom: 1rem;
+                            @include border-shadow-effect-1($secondary-background);
+                        }
+                        > li {
+                            > a {
+                                color: $font-secondary-color;
+                                &:focus,
+                                &:hover,
+                                &:active {
+                                    color: $font-secondary-color;
+                                }
+                                &.current-page {
+                                    border-bottom-color: $font-secondary-color;
+                                }
+                            }
+                        }
+                    }
+                }
+                .navbar-header {
+                    .navbar-brand {
+                        > img {
+                            &.relative-img {
+                                display: none;
+                            }
+                            &.fixed-img {
+                                display: block;
+                            }
+                        }
+                    }
+                    .navbar-toggle {
+                        border-color: $font-secondary-color;
+                        .icon-bar {
+                            background-color: $primary-background;
+                        }
+                    }
+                }
+            }
+        }
+        .navbar-nav {
+            > li {
+                > a {
+                    padding: 10px 0 10px 0;
+                    margin: 0 15px 0 15px;
+                    zoom: 1;
+                    &:hover {
+                        @include basic-transition-effect (all .5s ease);
+                        @include transform-scaling-effect(1.1);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}

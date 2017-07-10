@@ -1,0 +1,152 @@
+/* _mixins.scss *** Mixins for the whole site. */
+
+/* Mixins */
+
+/* Top to Bottom Linear Gradient Background */
+@mixin vertical-linear-gradient($first-color, $second-color) {
+	background: $first-color; /* fallback for old browsers */
+	background: -webkit-linear-gradient($first-color, $second-color); /* Chrome 10-25, Safari 5.1-6 */
+	background: -o-linear-gradient($first-color, $second-color); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient($first-color, $second-color); /* For Firefox 3.6 to 15 */
+	background: linear-gradient($first-color, $second-color); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background-repeat: no-repeat;
+}
+
+/* Left to Right Linear Gradient Background */
+@mixin horizontal-linear-gradient($first-color, $second-color) {
+	background: $first-color; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, $first-color, $second-color); /* Chrome 10-25, Safari 5.1-6 */
+	background: -o-linear-gradient(to left, $first-color, $second-color); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(to left, $first-color, $second-color); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to left, $first-color, $second-color); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background-repeat: no-repeat;
+}
+
+/* Transition Animations */
+@mixin transition-effect($transition-property) {
+	-webkit-transition: $transition-property 0.4s ease;
+    -moz-transition: $transition-property 0.4s ease;
+    -o-transition: $transition-property 0.4s ease;
+    transition: $transition-property 0.4s ease;
+}
+
+/* Basic Animations */
+@mixin basic-animation($animation-properties) {
+	-webkit-animation: $animation-properties;
+    -moz-animation: $animation-properties;
+    -o-animation: $animation-properties;
+    animation: $animation-properties;
+}
+
+/* Basic Transition */
+@mixin basic-transition-effect($transition) {
+	-webkit-transition: $transition;
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+}
+
+/* Border Shadow Effect 1 */
+@mixin border-shadow-effect-1($color) {
+	-webkit-box-shadow: 2px 2px 5px $color;
+    -moz-box-shadow: 2px 2px 5px $color;
+    box-shadow: 2px 2px 5px $color;
+}
+
+/* Border Shadow Effect 2 */
+@mixin border-shadow-effect-2($color) {
+	-webkit-box-shadow: 2px 2px 5px $color, 2px -2px 5px $color;
+    -moz-box-shadow: 2px 2px 5px $color, 2px -2px 5px $color;
+    box-shadow: 2px 2px 5px $color, 2px -2px 5px $color;
+}
+
+/* Border Shadow Alternative Effect */
+@mixin border-shadow-alternative-effect($color) {
+	-webkit-box-shadow: 2px 4px 5px $color;
+    -moz-box-shadow: 2px 4px 5px $color;
+    box-shadow: 2px 4px 5px $color;
+}
+
+/* Border Shadow Alternative Effect With No Top */
+@mixin border-shadow-alternative-effect($color) {
+	-webkit-box-shadow: 2px 4px 5px $color, 0 0 0 $color;
+    -moz-box-shadow: 2px 4px 5px $color, 0 0 0 $color;
+    box-shadow: 2px 4px 5px $color, 0 0 0 $color;
+}
+
+/* Border Shadow Top and Bottom */
+@mixin border-shadow-top-bottom($color) {
+	-webkit-box-shadow: 2px 4px 5px $color;
+    -moz-box-shadow: 2px 4px 5px $color;
+    box-shadow: 2px 4px 5px $color;
+}
+
+/* Basic Transform Effect */
+@mixin basic-transform-effect($transform) {
+    -webkit-transform: $transform;
+    -moz-transform: $transform;
+    -ms-transform: $transform;
+    transform: $transform;
+}
+
+/* Transform Scaling Effect */
+@mixin transform-scaling-effect($scale) {
+	-ms-transform: scale($scale);
+    -webkit-transform: scale($scale);
+    -moz-transform: scale($scale);
+    transform: scale($scale);
+}
+
+/* Basic Rotation Effect */
+@mixin basic-rotation-effect($degrees) {
+    -webkit-transform: rotate($degrees);
+    -moz-transform: rotate($degrees);
+    -ms-transform: rotate($degrees);
+	transform: rotate($degrees);
+}
+
+/* Transform Rotation Y Effect */
+@mixin transform-rotation-effect($degrees) {
+    -webkit-transform: rotatey($degrees);
+    -moz-transform: rotatey($degrees);
+    -ms-transform: rotatey($degrees);
+	transform: rotatey($degrees);
+}
+
+/* Transform Rotation X Effect */
+@mixin transform-rotation-x-effect($degrees) {
+    -webkit-transform: rotatex($degrees);
+    -moz-transform: rotatex($degrees);
+    -ms-transform: rotatex($degrees);
+	transform: rotatex($degrees);
+}
+
+/* Transform 3D Effect */
+@mixin transform-dimension-effect($dimension) {
+    -webkit-transform-style: $dimension;
+    -moz-transform-style: $dimension;  
+    transform-style: $dimension;
+}
+
+/* Perspective Effect */
+@mixin perspective-effect($perspective-value) {
+	-webkit-perspective: $perspective-value;
+	-moz-perspective: $perspective-value;
+    perspective: $perspective-value;
+}
+
+/* Backface Visibility Effect */
+@mixin backface-visibility-effect($visible) {
+	-webkit-backface-visibility: $visible;
+	-moz-backface-visibility: $visible;
+    backface-visibility: $visible;
+}
+
+/* Flex Box All Browsers */
+@mixin flex() {
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}

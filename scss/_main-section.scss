@@ -1,0 +1,221 @@
+/* _main-section.scss *** Styles for the main section of the page as well as universal styles. */
+
+.main-section {
+    margin-bottom: 10rem;
+    padding-bottom: 2em;
+    .site-work-container {
+        .flip {
+            @include perspective-effect(800px);
+            height: 320px;
+            position: relative;
+            margin: 0;
+            padding: 0;
+            &.mhs-panel {
+                .front {
+                    background-color: $black-background;
+                }
+            }
+            &.scl-panel {
+                .front {
+                    background-color: $foggy-gray-background;
+                }
+            }
+            &.jdch-panel {
+                .front {
+                    background-color: $brown-background;
+                }
+            }
+            &.evangelical-panel {
+                .front {
+                    background-color: $gray-background;
+                }
+            }
+            &.wsah-panel {
+                .front {
+                    background-color: $brown-background;
+                }
+            }
+            &.mainehealth-panel {
+                .front {
+                    background-color: $black-background;
+                }
+            }
+            .card {
+                width: 100%;
+                height: 100%;
+                @include transform-dimension-effect(preserve-3d);
+                @include basic-transition-effect(1.5s);
+                &.flipped {
+                    @include transform-rotation-effect(-180deg);
+                }
+                .face {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    @include backface-visibility-effect(hidden);
+                    @include basic-transform-effect(translateZ(1px)) z-index: 2;
+                    text-align: center;
+                    a {
+                        color: $font-secondary-color;
+                    }
+                }
+                .front,
+                .back {
+                    @include border-shadow-effect-2($black-background);
+                }
+                .front {
+                    position: absolute;
+                    z-index: 1;
+                    color: white;
+                    cursor: pointer;
+                    @include transition-effect(all);
+                    img {
+                        width: 200px;
+                        height: auto;
+                        position: absolute;
+                        margin: auto;
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
+                    }
+                    .turn {
+                        display: none;
+                        @include media("<desktop") {
+                            display: block;
+                            position: absolute;
+                            top: 0px;
+                            left: 7px;
+                        }
+                        &:before {
+                            font-family: FontAwesome;
+                            font-size: 3rem;
+                            content: "\f060";
+                            color: $font-primary-white;
+                        }
+                    }
+                }
+                .back {
+                    @include transform-rotation-effect(-180deg);
+                    color: $font-secondary-color;
+                    background-color: $secondary-background;
+                    .close {
+                        display: none;
+                        @include media("<desktop") {
+                            display: block;
+                            position: absolute;
+                            top: 0px;
+                            right: 7px;
+                            opacity: 1;
+                        }
+                        &:before {
+                            font-family: FontAwesome;
+                            font-size: 3rem;
+                            content: "\f00d";
+                            color: $font-secondary-color;
+                        }
+                    }
+                    h3 {
+                        margin: 4rem auto 8rem auto;
+                    }
+                    ul {
+                        text-align: left;
+                        list-style-type: square;
+                    }
+                    .heart-beat {
+                        position: absolute;
+                        bottom: -17px;
+                        right: -2px;
+                        @include basic-rotation-effect(-45deg);
+                        &:before {
+                            font-size: 8rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    blockquote {
+        margin-bottom: 8rem;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+    ul {
+        list-style-type: square;
+    }
+}
+
+.code-icon-holder {
+    @include flex();
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    height: 8em;
+    @include media("<tablet") {
+    	height: 18em;
+   	}
+    .code-icon-wrapper {
+        height: 5em;
+        width: 5em;
+        position: relative;
+        .code-icon {
+            height: 4em;
+            width: 4em;
+            position: absolute;
+            left: 0;
+            top: 0;
+            @include media("<desktop") {
+    			height: 4em;
+    			width: 4em;
+    		}
+    		@include media("<tablet") {
+    			height: 3em;
+    			width: 3em;
+    		}
+            &.isrotated {
+                @include basic-animation (rotating 3s);
+            }
+        }
+    }
+}
+
+@keyframes rotating {
+    0% {
+        left: 0;
+        top: 0;
+    }
+    25% {
+        left: -120%;
+        top: -20%;
+    }
+    50% {
+       left: 1400%;
+        top: 120%;
+    }
+    75% {}
+    100% {
+        left: 0;
+        top: 0;
+    }
+}
+
+@-webkit-keyframes rotating {
+    0% {
+        left: 0;
+        top: 0;
+    }
+    25% {
+        left: -120%;
+        top: -20%;
+    }
+    50% {
+        left: 1400%;
+        top: 120%;
+    }
+    75% {}
+    100% {
+        left: 0;
+        top: 0;
+    }
+}

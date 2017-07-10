@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Gianni Feola | Front End Devloper</title>
+    <!-- Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="Gianni Feola is a professional front-end developer specializing in UI design.">
+    <meta name="keywords" content="front, end, front-end, UI, UX, front-end developer, ui developer, developer, engineer, massachusetts, ma, boston, professional, coder, web developer, gianni, feola, gianni feola">
+    <meta property="og:image" content="http://www.gianni-feola-developer.com/images/website-blue-trex.jpg" />
+    <meta property="og:url"content="http://www.gianni-feola-developer.com" />
+    <meta property="og:title" content="Gianni Feola | UI Devlopert" />
+    <meta property="og:description" content="Gianni Feola is a professional front-end developer specializing in UI design."/>
+    <!-- Scripts Loaded -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-animate.js"></script>
+    <script src="https://use.fontawesome.com/b32fb966ac.js"></script>
+    <script src="dist\js\all.min.js"></script>
+    <!-- CSS Loaded -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="dist/css/all.css">
+    <!-- Favicon -->
+    <link rel="icon" href="images/website-blue-trex-icon.png">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a title="Email Gianni" class="navbar-brand" href="mailto:gf.development24@gmail.com">
+                        <img class="relative-img" src="images/white-trex.png">
+                        <img class="fixed-img" src="images/blue-trex.png">
+                        <div class="brand-wrapper">
+                            <h4>Gianni Feola</h3>
+                            <h4>Front End Developer</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a class="current-page" href="./">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="./testimonials.html">Testimonials</a>
+                        </li>
+                        <li>
+                            <a href="./about.html">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Page Content -->
+    <div class="main-section home">
+        <div class="container">
+            <div class="row">
+                <div class="text-block col-xs-12">
+                    <h1 class="text-center">Portfolio Projects</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="site-work-container" ng-app="flipApp">
+                        <div ng-controller="flipCtrl" class="flip col-xs-12 col-sm-6 col-lg-4 mhs-panel">
+                            <div class="card flipped" ng-class="{'flipped':isFlipped}" ng-mouseenter="isFlipped=!isFlipped">
+                                <div class="face front">
+                                    <div class="turn"></div>
+                                    <img src="images/mhslogo.svg" alt="MHS website logo">
+                                </div>
+                                <div class="face back">
+                                    <div class="close"></div>
+                                    <h3>
+                                        <a target="_blank" href="https://www.mhs.net/">Memorial Healthcare System</a>
+                                    </h3>
+                                    <ul>
+                                        <li>Responsive design using bootstrap and SaSS</li>
+                                        <li>Snippet templating with Handlebars</li>
+                                        <li>jQuery and jQuery UI frameworks</li>
+                                        <li>Usage of Grunt preprocessor</li>
+                                    </ul>
+                                    <div class="heart-beat"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div ng-controller="flipCtrl" class="flip col-xs-12 col-sm-6 col-lg-4 scl-panel">
+                            <div class="card flipped" ng-class="{'flipped':isFlipped}" ng-mouseenter="isFlipped=!isFlipped">
+                                <div class="face front">
+                                    <div class="turn"></div>
+                                    <img src="images/scllogo.png" alt="SCL website logo">
+                                </div>
+                                <div class="face back">
+                                    <div class="close"></div>
+                                    <h3>
+                                        <a target="_blank" href="http://www.sclhealthsystem.org/find-a-doctor/search-results/?scheduling=1">SCL Health System</a>
+                                    </h3>
+                                    <ul>
+                                        <li>Modal Window use with Epic web service for appointment scheduling</li>
+                                        <li>Responsive design using in-house grid css</li>
+                                        <li>jQuery framework</li>
+                                    </ul>
+                                    <div class="heart-beat"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div ng-controller="flipCtrl" class="flip col-xs-12 col-sm-6 col-lg-4 jdch-panel">
+                            <div class="card flipped" ng-class="{'flipped':isFlipped}" ng-mouseenter="isFlipped=!isFlipped">
+                                <div class="face front">
+                                    <div class="turn"></div>
+                                    <img src="images/jdchlogo.png" alt="JDCH website logo">
+                                </div>
+                                <div class="face back">
+                                    <div class="close"></div>
+                                    <h3>
+                                        <a target="_blank" href="https://www.jdch.com/">Joe DiMaggio Children's Hospital</a>
+                                    </h3>
+                                    <ul>
+                                        <li>Responsive design using bootstrap and SaSS</li>
+                                        <li>Snippet templating with Handlebars</li>
+                                        <li>jQuery and jQuery UI frameworks</li>
+                                        <li>Usage of Grunt preprocessor</li>
+                                    </ul>
+                                    <div class="heart-beat"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div ng-controller="flipCtrl" class="flip col-xs-12 col-sm-6 col-lg-4 evangelical-panel">
+                            <div class="card flipped" ng-class="{'flipped':isFlipped}" ng-mouseenter="isFlipped=!isFlipped">
+                                <div class="face front">
+                                    <div class="turn"></div>
+                                    <img src="images/evangelicallogo.gif" alt="Evangelical website logo">
+                                </div>
+                                <div class="face back">
+                                    <div class="close"></div>
+                                    <h3>
+                                        <a target="_blank" href="http://www.evanhospital.com/">Evangelical Community Hospital</a>
+                                    </h3>
+                                    <ul>
+                                        <li>Fixed width site converted to responsive design using Bootstrap</li>
+                                        <li>jQuery and jQuery UI frameworks</li>
+                                    </ul>
+                                    <div class="heart-beat"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div ng-controller="flipCtrl" class="flip col-xs-12 col-sm-6 col-lg-4 wsah-panel">
+                            <div class="card flipped" ng-class="{'flipped':isFlipped}" ng-mouseenter="isFlipped=!isFlipped">
+                                <div class="face front">
+                                    <div class="turn"></div>
+                                    <img src="images/Warm-Springs-Animal-Hospital-logo.png" alt="WSAH website logo">
+                                </div>
+                                <div class="face back">
+                                    <div class="close"></div>
+                                    <h3>
+                                        <a target="_blank" href="http://www.wsah.us/">Warm Springs Animal Hospital</a>
+                                    </h3>
+                                    <ul>
+                                        <li>Content creation and editing</li>
+                                        <li>Some PHP for HTML markup management</li>
+                                    </ul>
+                                    <div class="heart-beat"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div ng-controller="flipCtrl" class="flip col-xs-12 col-sm-6 col-lg-4 mainehealth-panel">
+                            <div class="card flipped" ng-class="{'flipped':isFlipped}" ng-mouseenter="isFlipped=!isFlipped">
+                                <div class="face front">
+                                    <div class="turn"></div>
+                                    <img src="images/coming_soon.png" alt="Coming Soon Image for Maine Health">
+                                </div>
+                                <div class="face back">
+                                    <div class="close"></div>
+                                    <h3>
+                                        <a target="_blank" href="http://www.mainehealth.org/">MaineHealth</a>
+                                    </h3>
+                                    <ul>
+                                        <li>Responsive design using bootstrap and SaSS</li>
+                                        <li>jQuery and jQuery UI frameworks</li>
+                                        <li>Usage of Grunt preprocessor</li>
+                                    </ul>
+                                    <div class="heart-beat"></div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="container">
+        <div class="linkedin-profile">
+            <a class="linked-in-square" target="_blank" href="https://www.linkedin.com/in/gianni-feola-104685b"></a>
+        </div>
+        <div class="site-details col-xs-12 col-sm-5">
+            This site was created using Gulp, Angular.js, SCSS and jQuery.
+        </div>
+        <div class="copyright">
+            <p>&copy; 2017 A Gianni Feola Creation</p>
+        </div>
+    </footer>
+</body>
+
+</html>

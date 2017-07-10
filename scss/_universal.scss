@@ -1,0 +1,105 @@
+/* _universal.scss *** Universal styles for the site*/
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    @include vertical-linear-gradient(#6190E8, #A7BFE8);
+    body {
+        font-family: $font-list;
+        color: $font-primary-white;
+        font-size: 1.6rem;
+        background-color: transparent;
+        overflow-x: hidden;
+        line-height: 1.5;
+        @include media("<desktop") {
+            font-size: 1.4rem
+        }
+        @include media("<tablet") {
+            font-size: 1.2rem
+        }
+        a {
+            color: $font-primary-white;
+            text-decoration: none;
+            &:focus,
+            &:hover,
+            &:active {
+                color: $font-primary-white;
+                text-decoration: none;
+            }
+            &.current-page {
+            	@include media(">=tablet") {
+            		border-bottom: 2px solid;
+            	}
+            }
+        }
+        h1,
+        h3,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-top: 0;
+            margin-bottom: 2rem;
+        }
+        h1 {
+            font-size: 4.3rem;
+        }
+        h2 {
+            font-size: 3.3rem;
+        }
+        h3 {
+            font-size: 2.3rem;
+        }
+        h4 {
+            font-size: 1.2rem;
+        }
+        p {
+            margin-bottom: 2rem;
+        }
+        .linked-in-square {
+            &:before {
+                font-family: FontAwesome;
+                content: "\f08c";
+            }
+        }
+        .heart-beat {
+            &:before {
+                font-family: FontAwesome;
+                content: "\f21e";
+            }
+        }
+        blockquote {
+            text-align: left;
+            font-style: italic;
+            font-size: inherit;
+            border-left: none;
+            .fa-quote-left {
+                font-family: FontAwesome;
+                margin-right: 2rem;
+                vertical-align: super;
+                font-size: 4rem;
+            }
+            .fa-quote-right {
+                font-family: FontAwesome;
+                margin-left: 2rem;
+                vertical-align: text-top;
+                float: right;
+                font-size: 4rem;
+            }
+            .author {
+                display: block;
+            }
+        }
+        .text-block {
+            margin: 10rem 0;
+        }
+        .content-block {
+            margin-bottom: 4rem;
+        }
+        .alternate-colors {
+            background-color: $secondary-background;
+            color: $font-alternate-color;
+            @include border-shadow-effect-2($secondary-background);
+        }
+    }
+}
